@@ -35,8 +35,17 @@ public class LectureNotes {
 
         double piTwo = 3.1415;
         int almostPi = (int) piTwo; //Casts piTwo as an int, but loses data
-        System.out.println(almostPi); //3
+        System.out.println(almostPi); //3, Narrowing Conversion
 
+        int myInteger = 900;
+        long morePrecise = myInteger; //Widening Conversion
+
+        short thisShort = 11111;
+        byte thisByte = (byte) thisShort;
+        System.out.println(thisByte); //103. This is looping around.
+        int modulus = 11111 % 127;
+        System.out.println(modulus);
+        //11111 % 127 = 103
 
     }
 }
