@@ -13,8 +13,8 @@ public class ConsoleExercises {
         while(i != -1) {
             System.out.println("Please enter an integer: ");
             try {
-                int userInt = scanner.nextInt();
-                System.out.printf("\nThe integer is: %d \n", userInt);
+                i = scanner.nextInt();
+                System.out.printf("\nThe integer is: %d \n", i);
             } catch(InputMismatchException ime) {
                 System.out.println("\nThat is not an integer. \n");
                 i = 0;
