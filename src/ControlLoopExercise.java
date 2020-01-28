@@ -43,10 +43,26 @@ public class ControlLoopExercise {
 //            i++;
 //        }
 
-        int j = 0;
-        do {
-            System.out.println(j);
-        } while (j != 0);
+//        int j = 0;
+//        do {
+//            System.out.println(j);
+//        } while (j != 0);
+
+//        for (int t=0;t<7;t++) {
+//            if(t == 3) {
+//                continue; //Skip 3
+//            } else if (t == 6) {
+//                break; //Break before printing 6
+//            }
+//            System.out.println(t);
+//        }
+
+        for (int t=0;t<100;t++) {
+            if(t % 2 == 1) {
+                continue;
+            }
+            System.out.println(t);
+        }
 
     }
 
