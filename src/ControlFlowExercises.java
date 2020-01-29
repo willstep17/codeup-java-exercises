@@ -9,17 +9,25 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
+//        for(int i=5;i<=15;i++) {
+//            System.out.println(i + " ");
+//        }
+
 //        int r = 0;
 //        do {
 //            System.out.print(r);
 //            r += 2;
 //        } while (r <= 100);
 
-        int j = 100;
-        do {
-            System.out.print(j + " ");
-            j -= 5;
-        } while (j >= -10);
+//        for(int t=0;t<=100;t+=2) {
+//            System.out.print(t + " ");
+//        }
+
+//        int j = 100;
+//        do {
+//            System.out.print(j + " ");
+//            j -= 5;
+//        } while (j >= -10);
 
 //        for(int i=100;i>=-10;i-=5) {
 //            System.out.print(i + " ");
@@ -52,13 +60,13 @@ public class ControlFlowExercises {
 //        System.out.print("Enter an integer to go up to: ");
 //        int userInput = Integer.parseInt(scanner.next());
 //        System.out.println("Here is your table!\n");
-//        System.out.println("number | squared | cubed");
+//        System.out.println("Number | Squared | Cubed");
 //        System.out.println("------ | ------- | -----");
 //        for (int i=1;i<=userInput;i++) {
-//            System.out.printf ("%d      | %d       | %d\n", i, i*i, i*i*i);
+//            System.out.printf ("%-6d | %-7d | %d\n", i, i*i, i*i*i);
 //        }
 
-//        getGrade();
+        getGrade();
 
     }
 
@@ -68,7 +76,9 @@ public class ControlFlowExercises {
         do {
             System.out.print("Enter a grade from 0 to 100 (-1 to exit): ");
             grade = Integer.parseInt(gradeScanner.next());
-            if (grade >= 88) {
+            if (grade == -1) {
+                break;
+            } else if (grade >= 88) {
                 System.out.println("A");
             } else if (grade >= 80) {
                 System.out.println("B");
