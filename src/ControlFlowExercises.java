@@ -52,7 +52,7 @@ public class ControlFlowExercises {
 //            System.out.printf ("%d      | %d       | %d\n", i, i*i, i*i*i);
 //        }
 
-//        getGrade();
+        getGrade();
 
     }
 
