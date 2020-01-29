@@ -9,11 +9,17 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-//        int j = 100;
+//        int r = 0;
 //        do {
-//            System.out.print(j + " ");
-//            j -= 5;
-//        } while (j >= -10);
+//            System.out.print(r);
+//            r += 2;
+//        } while (r <= 100);
+
+        int j = 100;
+        do {
+            System.out.print(j + " ");
+            j -= 5;
+        } while (j >= -10);
 
 //        for(int i=100;i>=-10;i-=5) {
 //            System.out.print(i + " ");
@@ -41,7 +47,7 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        fizzBuzz(100);
+//        fizzBuzz(100);
 
 //        System.out.print("Enter an integer to go up to: ");
 //        int userInput = Integer.parseInt(scanner.next());
@@ -52,7 +58,7 @@ public class ControlFlowExercises {
 //            System.out.printf ("%d      | %d       | %d\n", i, i*i, i*i*i);
 //        }
 
-        getGrade();
+//        getGrade();
 
     }
 
