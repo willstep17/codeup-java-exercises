@@ -1,10 +1,18 @@
+import java.util.Scanner;
+
 public class Bob {
     public static void main(String[] args) {
-        System.out.println(promptBob("Hey Bob, how are you?"));
-        System.out.println(promptBob("Answer me Bob!"));
-        System.out.println(promptBob(""));
-        System.out.println(promptBob("Hey Bob."));
-        System.out.println(promptBob("Salas"));
+        Scanner scanner = new Scanner(System.in);
+        String userInput = "";
+        System.out.print("Have a conversation with Bob (-1 to end): ");
+        do {
+            userInput = scanner.nextLine();
+            if (userInput.equals("-1")) {
+                break;
+            }
+            System.out.println(promptBob(userInput));
+            System.out.print("Respond: ");
+        } while (!userInput.equals("-1"));
     }
 
     public static String promptBob(String inputString) {
