@@ -27,7 +27,7 @@ public class HighLow {
     }
 
     public static boolean makeGuess(int inputRandomNumber, int inputNumberOFGuesses) {
-        if (inputNumberOFGuesses == 0) {
+        if (inputNumberOFGuesses < 0) {
             System.out.println("GAME OVER: Too many guesses.");
             return true;
         }
