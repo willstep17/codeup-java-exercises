@@ -7,37 +7,38 @@ public class MethodsExercises {
 //        System.out.println(subtract(3, 1));
 //        System.out.println(multiply(4, 5));
 //        System.out.println(divide(15, 5));
+//        System.out.println(divide(4, 0)); //Infinity
 //        System.out.println(modulus(27, 6));
 
 //        System.out.println(multiplyWithoutMultiplying(3,7));
 
 //        System.out.println("Return from multiplyWithRecursion2(): " + multiplyWithRecursion2(22, 5));
 
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
-//        System.out.println("Validated input: " + userInput);
+        System.out.print("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
+        System.out.println("Validated input: " + userInput);
 
-        calculateFactorial();
+//        calculateFactorial();
 
     }
 
-    public static int add(int a, int b) {
+    public static double add(double a, double b) {
         return a + b;
     }
 
-    public static int subtract(int a, int b) {
+    public static double subtract(double a, double b) {
         return a - b;
     }
 
-    public static int multiply(int a, int b) {
+    public static double multiply(double a, double b) {
         return a * b;
     }
 
-    public static double divide(int dividend, int divisor) {
-        return (double) dividend / divisor;
+    public static double divide(double dividend, double divisor) {
+        return dividend / divisor;
     }
 
-    public static int modulus(int a, int b) {
+    public static double modulus(double a, double b) {
         return a % b;
     }
 
@@ -50,13 +51,11 @@ public class MethodsExercises {
     }
 
     public static int multiplyWithRecursion(int a, int counter) {
-//        int counter = 1;
         int returnInt = 0;
         System.out.println("We are on iteration: " + counter + "of multiplyWithRecursion()");
         while (counter > 1) {
             returnInt += a;
             multiplyWithRecursion(a, counter-1);
-//            counter++;
         }
         return returnInt;
     }
