@@ -14,9 +14,9 @@ public class MethodsExercises {
 
 //        System.out.println("Return from multiplyWithRecursion2(): " + multiplyWithRecursion2(22, 5));
 
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
-//        System.out.println("Validated input: " + userInput);
+        System.out.print("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
+        System.out.println("Validated input: " + userInput);
 
 //        calculateFactorial();
 
@@ -51,13 +51,11 @@ public class MethodsExercises {
     }
 
     public static int multiplyWithRecursion(int a, int counter) {
-//        int counter = 1;
         int returnInt = 0;
         System.out.println("We are on iteration: " + counter + "of multiplyWithRecursion()");
         while (counter > 1) {
             returnInt += a;
             multiplyWithRecursion(a, counter-1);
-//            counter++;
         }
         return returnInt;
     }
