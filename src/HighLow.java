@@ -12,10 +12,6 @@ public class HighLow {
         int numberOfGuesses = 6;
         boolean winOrLose = false;
         while (!winOrLose) {
-            if (numberOfGuesses == 0) {
-                System.out.println("GAME OVER: Too many guesses.");
-                break;
-            }
             winOrLose = makeGuess(randomNumber, numberOfGuesses);
             numberOfGuesses--;
         }
@@ -31,6 +27,10 @@ public class HighLow {
     }
 
     public static boolean makeGuess(int inputRandomNumber, int inputNumberOFGuesses) {
+        if (inputNumberOFGuesses == 0) {
+            System.out.println("GAME OVER: Too many guesses.");
+            return true;
+        }
         int userGuess = getInteger(1, 100);
         if (userGuess < inputRandomNumber) {
             System.out.println("HIGHER! Number of guesses left: " + inputNumberOFGuesses);
