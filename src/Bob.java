@@ -4,15 +4,15 @@ public class Bob {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String userInput = "";
-        System.out.print("Have a conversation with Bob (-1 to end): ");
-        do {
+        System.out.print("Have a conversation with Bob ('Bye' to leave): ");
+        while (true) {
             userInput = scanner.nextLine();
-            if (userInput.equals("-1")) {
+            if (userInput.toLowerCase().equals("bye")) {
                 break;
             }
             System.out.println(promptBob(userInput));
             System.out.print("Respond: ");
-        } while (!userInput.equals("-1"));
+        }
     }
 
     public static String promptBob(String inputString) {
@@ -22,7 +22,7 @@ public class Bob {
             return "Whoa, chill out!";
         } else if (inputString.isEmpty()) {
             return "Fine. Be that way!";
-        } else if (inputString.equals("Salas")) {
+        } else if (inputString.toLowerCase().equals("salas")) {
             return "*Bob cowers in fear*";
         } else {
             return "Whatever.";
