@@ -7,6 +7,7 @@ public class MethodsExercises {
 //        System.out.println(subtract(3, 1));
 //        System.out.println(multiply(4, 5));
 //        System.out.println(divide(15, 5));
+//        System.out.println(divide(4, 0)); //Infinity
 //        System.out.println(modulus(27, 6));
 
 //        System.out.println(multiplyWithoutMultiplying(3,7));
@@ -17,27 +18,27 @@ public class MethodsExercises {
 //        int userInput = getInteger(1, 10);
 //        System.out.println("Validated input: " + userInput);
 
-        calculateFactorial();
+//        calculateFactorial();
 
     }
 
-    public static int add(int a, int b) {
+    public static double add(double a, double b) {
         return a + b;
     }
 
-    public static int subtract(int a, int b) {
+    public static double subtract(double a, double b) {
         return a - b;
     }
 
-    public static int multiply(int a, int b) {
+    public static double multiply(double a, double b) {
         return a * b;
     }
 
-    public static double divide(int dividend, int divisor) {
-        return (double) dividend / divisor;
+    public static double divide(double dividend, double divisor) {
+        return dividend / divisor;
     }
 
-    public static int modulus(int a, int b) {
+    public static double modulus(double a, double b) {
         return a % b;
     }
 
