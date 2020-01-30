@@ -14,11 +14,11 @@ public class MethodsExercises {
 
 //        System.out.println("Return from multiplyWithRecursion2(): " + multiplyWithRecursion2(22, 5));
 
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        System.out.println("Validated input: " + userInput);
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println("Validated input: " + userInput);
 
-//        calculateFactorial();
+        calculateFactorial();
 
     }
 
@@ -69,7 +69,7 @@ public class MethodsExercises {
 
     public static int getInteger(int min, int max) {
         Scanner getIntegerScanner = new Scanner(System.in);
-        int userInput = Integer.parseInt(getIntegerScanner.next());
+        int userInput = getIntegerScanner.nextInt();
         if (userInput > min && userInput < max) {
             return userInput;
         } else {
@@ -81,12 +81,15 @@ public class MethodsExercises {
     public static void calculateFactorial() {
         Scanner factorialScanner = new Scanner(System.in);
         System.out.print("Please enter an integer between 1 and 21: ");
-        int userInput = getInteger(1, 21);
+        int base = getInteger(1, 21);
         long factorial = 1;
-        for (int i=1;i<=userInput;i++) {
+        String output = "! = 1";
+        System.out.printf("1%s\n", output);
+        for (int i=2;i<=base;i++) {
             factorial *= i;
+            output += " x " + i;
+            System.out.printf("%d%s = %d\n", i, output, factorial);
         }
-        System.out.println("The factorial of " + userInput + " is: " + factorial);
         System.out.print("Would you like to continue? (y/n): ");
         if(factorialScanner.nextLine().toLowerCase().equals("y")) {
             calculateFactorial();
