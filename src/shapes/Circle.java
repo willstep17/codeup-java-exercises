@@ -6,7 +6,6 @@ public class Circle {
     private static double totalCircumference;
     private static double totalArea;
 
-
     public Circle(double inputRadius) {
         this.radius = inputRadius;
         numberOfCircles++;
