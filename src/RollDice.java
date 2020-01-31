@@ -3,9 +3,7 @@ import java.lang.Math;
 
 public class RollDice {
     public static void main(String[] args) {
-
         rollDice();
-
     }
 
     public static int returnRandom(int sides) {
@@ -19,9 +17,9 @@ public class RollDice {
         int diceTwoSides = Integer.parseInt(diceScanner.next());
         System.out.println("Side One Roll: " + returnRandom(diceOneSides));
         System.out.println("Side Two Roll: " + returnRandom(diceTwoSides));
-        System.out.println("Would you like to continue: ");
+        System.out.print("Would you like to continue (y/n): ");
         String response = diceScanner.next();
-        if (response.toLowerCase().equals("yes")) {
+        if (response.toLowerCase().equals("y")) {
             rollDice();
         }
     }
