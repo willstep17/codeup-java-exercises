@@ -1,14 +1,29 @@
 public class Person {
     private String name;
+    private int age;
+
+//    public Person(String inputName) {
+//        this.name = inputName;
+//    }
+
+    public Person(String inputName, int inputAge) {
+        this.name = inputName;
+        this.age = inputAge;
+    }
 
     public Person(String inputName) {
         this.name = inputName;
     }
 
-    public Person() { }
+    public Person() {
+
+    }
 
     public static void main(String[] args) {
+        Person chris = new Person("Chris", 32);
         Person will = new Person("Will");
+        Person bill = new Person();
+        will.name = "William";
 
 //        System.out.println("Return from will.getName(): " + will.getName());
 //        will.setName("William");

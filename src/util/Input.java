@@ -8,13 +8,13 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    public String getString() {
-        System.out.print("Enter a String: ");
+    public String getString(String prompt) {
+        System.out.print(prompt);
         return scanner.nextLine();
     }
 
-    public boolean yesNo() {
-        System.out.print("(y/n): ");
+    public boolean yesNo(String prompt) {
+        System.out.print(prompt);
         String userInput = scanner.nextLine();
         userInput = userInput.toLowerCase();
         if(userInput.equals("yes") || userInput.equals("y")) {
@@ -34,10 +34,9 @@ public class Input {
         }
     }
 
-    public int getInt() {
-        System.out.print("Enter an integer: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+    public int getInt(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -50,9 +49,8 @@ public class Input {
         }
     }
 
-    public double getDouble() {
-        System.out.print("Enter a double: ");
-        double userInput = scanner.nextDouble();
-        return userInput;
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextDouble();
     }
 }
