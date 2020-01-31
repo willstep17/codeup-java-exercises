@@ -4,10 +4,10 @@ public class PushUps {
     }
 
     public static int multiplyWOmultiply(int a, int b) {
-        int returnValue = 0;
+        int sum = 0;
         for(int i=0;i<b;i++) {
-            returnValue += a;
+            sum += a;
         }
-        return returnValue;
+        return sum;
     }
 }
