@@ -3,5 +3,7 @@ public class Playground {
         String test = "Start";
         test += 21;
         System.out.println(test);
+        Person newPerson = new Person("Jim");
+        newPerson.getName();
     }
 }
