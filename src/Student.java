@@ -1,9 +1,10 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Student {
-    static int numberOfStudents = 0;
-    String name;
-    String cohort;
+    static int numberOfStudents = 0; //Belongs to class, not an instance of the class
+    public String name; //Anyone who has access to the Student class can access the name property
+    private String cohort;
     Date startDate;
     String program;
     String location;
