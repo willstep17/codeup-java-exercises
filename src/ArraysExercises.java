@@ -17,6 +17,7 @@ public class ArraysExercises {
         }
 
         Person[] newPeople = addPerson(people, new Person("Ted"));
+        newPeople = addPerson(newPeople, new Person("Sandra"));
 
         System.out.println("newPeople length: " + newPeople.length);
         for(Person person : newPeople) {
@@ -25,10 +26,7 @@ public class ArraysExercises {
     }
 
     public static Person[] addPerson(Person[] inputPeople, Person newPerson) {
-        Person[] returnPeople = new Person[inputPeople.length + 1];
-        for(int i=0;i<inputPeople.length;i++) {
-            returnPeople[i] = inputPeople[i];
-        }
+        Person[] returnPeople = Arrays.copyOf(inputPeople, inputPeople.length + 1);
         returnPeople[inputPeople.length] = newPerson;
         return returnPeople;
     }
