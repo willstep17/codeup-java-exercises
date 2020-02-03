@@ -1,15 +1,11 @@
 package movies;
 
 import util.Input;
-import movies.MoviesArray;
 
 public class MoviesApplication {
     public static void main(String[] args) {
         Input input = new Input();
-        MoviesArray movies = new MoviesArray();
-        Movie[] movieArray = movies.findAll();
-
-        int category = -1;
+        Movie[] movieArray = MoviesArray.findAll();
 
         while(true) {
             System.out.println("What would you like to do?\n");
@@ -19,40 +15,39 @@ public class MoviesApplication {
             System.out.println("3 - View Movies in the Drama Category");
             System.out.println("4 - View Movies in the Horror Category");
             System.out.println("5 - View Movies in the SciFi Category\n");
-            category = input.getInt("Enter Your Choice: ");
-            switch(category) {
+            switch(input.getInt("Enter Your Choice: ")) {
                 case 0:
                     return;
                 case 1:
-                    for(Movie movie : movieArray) {
-                        System.out.println(movie.getName() + " -- " + movie.getCategory());
-                    }
+                    printMovies(movieArray);
                     break;
                 case 2:
-                    for(Movie movie : movieArray) {
-                        if(movie.getCategory() == "animated")
-                        System.out.println(movie.getName() + " -- " + movie.getCategory());
-                    }
+                    printMovies(movieArray, "animated");
                     break;
                 case 3:
-                    for(Movie movie : movieArray) {
-                        if(movie.getCategory() == "drama")
-                            System.out.println(movie.getName() + " -- " + movie.getCategory());
-                    }
+                    printMovies(movieArray, "drama");
                     break;
                 case 4:
-                    for(Movie movie : movieArray) {
-                        if(movie.getCategory() == "horror")
-                            System.out.println(movie.getName() + " -- " + movie.getCategory());
-                    }
+                    printMovies(movieArray, "horror");
                     break;
                 case 5:
-                    for(Movie movie : movieArray) {
-                        if(movie.getCategory() == "scifi")
-                            System.out.println(movie.getName() + " -- " + movie.getCategory());
-                    }
+                    printMovies(movieArray, "scifi");
                     break;
             }
+        }
+    }
+
+    public static void printMovies(Movie[] inputMovies, String inputCategory) {
+        for(Movie movie : inputMovies) {
+            if(movie.getCategory() == inputCategory) {
+                System.out.println(movie.getName() + " -- " + movie.getCategory());
+            }
+        }
+    }
+
+    public static void printMovies(Movie[] inputMovies) {
+        for(Movie movie : inputMovies) {
+                System.out.println(movie.getName() + " -- " + movie.getCategory());
         }
     }
 
