@@ -5,11 +5,9 @@ public class ServerNameGenerator {
     public static String[] nouns = {"Resolution", "Potato", "Chalkboard", "Studio", "Wealth", "Energy", "Homework", "Army", "Passenger", "Penalty", "Variety", "Road", "Contract"};
 
     public static void main(String[] args) {
-
         for(int i=0;i<20;i++) {
             System.out.println(returnRandom(adjectives) + "-" + returnRandom(nouns));
         }
-
     }
 
     public static String returnRandom(String[] inputArr) {
