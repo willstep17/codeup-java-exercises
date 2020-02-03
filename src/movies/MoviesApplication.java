@@ -1,6 +1,7 @@
 package movies;
 
 import util.Input;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoviesApplication {
@@ -62,10 +63,7 @@ public class MoviesApplication {
     }
 
     public static Movie[] addMovie(Movie[] inputMovies, String newMovieName, String newMovieCategory) {
-        Movie[] returnMovies = new Movie[inputMovies.length + 1];
-        for(int i=0;i<inputMovies.length;i++) {
-            returnMovies[i] = inputMovies[i];
-        }
+        Movie[] returnMovies = Arrays.copyOf(inputMovies, inputMovies.length + 1);
         Movie newMovie = new Movie(newMovieName, newMovieCategory);
         returnMovies[inputMovies.length] = newMovie;
         return returnMovies;
