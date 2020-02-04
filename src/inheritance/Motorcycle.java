@@ -6,4 +6,8 @@ public class Motorcycle extends Vehicle {
         super(2);
     }
 
+    public void report() {
+        System.out.println("I am a motorcycle!");
+    }
+
 }
