@@ -14,4 +14,8 @@ public class Vehicle {
     public void report() {
         System.out.println("I have " + this.numberOfTires + " tires.");
     }
+
+    public final void finalReport() {
+        System.out.println("This is a method on parent Vehicle class that is final and cannot be redeclared.");
+    }
 }

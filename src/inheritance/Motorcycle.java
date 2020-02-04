@@ -1,6 +1,7 @@
 package inheritance;
 
-public class Motorcycle extends Vehicle {
+//Final keyword means Motorcycle cannot have a subclass
+public final class Motorcycle extends Vehicle {
 
     public Motorcycle() {
         super(2);
