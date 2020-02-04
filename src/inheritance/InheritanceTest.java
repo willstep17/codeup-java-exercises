@@ -3,6 +3,7 @@ package inheritance;
 public class InheritanceTest {
     public static void main(String[] args) {
         Vehicle vehicleOne = new Vehicle(5);
+        vehicleOne.numberOfTires = 1;
         vehicleOne.go();
         vehicleOne.report();
 

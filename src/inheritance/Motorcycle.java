@@ -7,7 +7,7 @@ public class Motorcycle extends Vehicle {
     }
 
     public void report() {
-        System.out.println("I am a motorcycle!");
+        System.out.println("I am a motorcycle! Motorcycle overriding parent behavior for report()");
     }
 
 }
