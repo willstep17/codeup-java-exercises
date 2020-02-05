@@ -1,8 +1,13 @@
 package vehicle;
 
-public class Car implements Vehicle {
+public class Helicopter implements Vehicle {
+    public void fly() {
+        System.out.println("Flying");
+    }
+
+    @Override
     public void go(int miles) {
-        System.out.println("Go (from Car) for " + miles + " miles.");
+        System.out.println("chopchopchop");
     }
 
     @Override
