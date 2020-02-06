@@ -80,15 +80,15 @@ public class Student {
     }
 
     public double getAttendancePercentage() {
-        int present = 0;
-        int totalDays = 0;
+        double present = 0;
+        double totalDays = 0;
         for(Map.Entry<String, String> entry : attendance.entrySet()) {
             if(entry.getValue().equals("Y")) {
                 present++;
             }
             totalDays++;
         }
-        return (double) (totalDays / present) * 100;
+        return (present / totalDays) * 100;
     }
 
     public String getDaysAbsent() {
