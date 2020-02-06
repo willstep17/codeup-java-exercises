@@ -67,28 +67,27 @@ public class GradesApplication {
         students.put("drrraculaM", dracoMalfoy);
 
         System.out.println("Welcome to the Hogwarts student database!");
-        System.out.println("Here are the GitHub usernames of our students:\n");
-        System.out.println(students.keySet());
 
         while(true) {
             System.out.println("\nWhich student would you like more information on?");
+            System.out.println("GitHub Usernames: " + students.keySet());
             System.out.println("'A' for all students.");
             System.out.println("'R' for csv report on all students.");
             System.out.print("GitHub username: ");
             String inputKey = scanner.nextLine();
-            if(inputKey.equals("A")) {
+            if(inputKey.matches("[A]")) {
                 displayAllGrades(students);
-            } else if(inputKey.equals("R")) {
+            } else if(inputKey.matches("[R]")) {
                 csvReport(students);
             } else if(students.containsKey(inputKey)) {
                 System.out.println("Student Name: " + students.get(inputKey).getName());
-                System.out.println("Student Grade Average: " + students.get(inputKey).getGradeAverage());
                 System.out.println("Student Attendance: " + students.get(inputKey).getAttendancePercentage());
+                System.out.println("Student Grade Average: " + students.get(inputKey).getGradeAverage());
                 students.get(inputKey).displayAllGrades();
             } else {
                 System.out.println("Username does not exist.");
             }
-            System.out.print("Would you like to search for another student (y/n)?: ");
+            System.out.print("Would you like to search for another student? (y/n): ");
             String toContinue = scanner.nextLine();
             if(toContinue.toLowerCase().equals("n")) {
                 System.out.println("\nGoodbye.");
@@ -119,7 +118,7 @@ public class GradesApplication {
     public static void csvReport(HashMap<String, Student> inputStudents) {
         for(Map.Entry<String, Student> entry : inputStudents.entrySet()) {
             Student student = entry.getValue();
-            System.out.println(student.getName() + ", " + entry.getKey() + ", " + student.getGradeAverage() + ", " + student.getAttendancePercentage());
+            System.out.println(student.getName() + ", " + entry.getKey() + ", gradeAverage=" + student.getGradeAverage() + ", attendance=" + student.getAttendancePercentage());
         }
         System.out.println("");
     }
