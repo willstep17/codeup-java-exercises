@@ -32,9 +32,11 @@ public class Student {
         studentOne.addGrade(78);
         System.out.println("studentOne average: " + studentOne.getGradeAverage());
         System.out.println("studentOne days absent: " + studentOne.getDaysAbsent());
-        studentOne.recordAttendance("2020-01-13", "Y");
-        studentOne.recordAttendance("2013", "Y");
-        studentOne.recordAttendance("2020-01-13", "R");
+        studentOne.recordAttendance("2020-01-13", "Y"); //Pass
+        studentOne.recordAttendance("2013", "Y"); //Fail
+        studentOne.recordAttendance("2020-01-13", "R"); //Fail
+        studentOne.recordAttendance("2020-01-13", "N"); //Pass
+
 
 
     }

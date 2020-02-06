@@ -87,7 +87,7 @@ public class GradesApplication {
             } else {
                 System.out.println("Username does not exist.");
             }
-            System.out.print("Would you like to search for another student (y/n)?: ");
+            System.out.print("Would you like to search for another student? (y/n): ");
             String toContinue = scanner.nextLine();
             if(toContinue.toLowerCase().equals("n")) {
                 System.out.println("\nGoodbye.");
