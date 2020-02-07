@@ -20,7 +20,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.print("Yes or No? ");
+        System.out.print("Yes or No? (y/n): ");
         String userInput = this.scanner.next();
         return userInput.toLowerCase().startsWith("y");
     }

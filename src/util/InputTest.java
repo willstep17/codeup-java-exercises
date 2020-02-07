@@ -16,5 +16,8 @@ public class InputTest {
 
         input.getInt();
         input.getInt(2, 49);
+
+        input.getDouble();
+        input.getDouble(-33.33, 45.23);
     }
 }
