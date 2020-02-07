@@ -23,22 +23,31 @@ public class ExceptionsLecture {
 //            e.printStackTrace();
 //        }
 
-        boolean moveOn = false;
-        int i = 0;
-        do {
-            try {
-                System.out.print("Enter an integer: ");
-                i = scanner.nextInt();
-                moveOn = true;
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("Please enter an INTEGER.");
-            }
-        } while (moveOn);
+        try {
+            System.out.println(divide(3, 5));
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+        }
+
+//        boolean moveOn = false;
+//        int i = 0;
+//        do {
+//            try {
+//                System.out.print("Enter an integer: ");
+//                i = scanner.nextInt();
+//                moveOn = true;
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                System.out.println("Please enter an INTEGER.");
+//            }
+//        } while (moveOn);
 
     }
 
-    static int divide(int a, int b) {
+    static int divide(int a, int b) throws ArithmeticException {
+        if(b == 0) {
+            throw new ArithmeticException();
+        }
         return a / b;
     }
 
