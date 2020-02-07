@@ -1,9 +1,9 @@
 package animals;
 
-public class Mammal extends Animal {
+public abstract class Mammal extends Animal {
 
-    public Mammal(char inputGender, int inputNumberOfAppendages, String inputHabitat) {
-        super(inputGender, inputNumberOfAppendages, inputHabitat);
+    public Mammal(char inputGender, int inputNumberOfAppendages, String inputHabitat, String inputDiet) {
+        super(inputGender, inputNumberOfAppendages, inputHabitat, inputDiet);
     }
 
 }
