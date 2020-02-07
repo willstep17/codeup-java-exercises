@@ -66,6 +66,20 @@ public class GradesApplication {
         Student dracoMalfoy = new Student("Draco Malfoy", dracoMalfoyGrades, dracoMalfoyAttendance);
         students.put("drrraculaM", dracoMalfoy);
 
+        ArrayList<Integer> nevilleLongbottomGrades = new ArrayList<>();
+        nevilleLongbottomGrades.add(88);
+        nevilleLongbottomGrades.add(79);
+        nevilleLongbottomGrades.add(93);
+        nevilleLongbottomGrades.add(82);
+        HashMap<String, String> nevilleLongbottomAttendance = new HashMap<>();
+        nevilleLongbottomAttendance.put("2020-01-06", "Y");
+        nevilleLongbottomAttendance.put("2020-01-07", "Y");
+        nevilleLongbottomAttendance.put("2020-01-08", "Y");
+        nevilleLongbottomAttendance.put("2020-01-09", "Y");
+        nevilleLongbottomAttendance.put("2020-01-10", "Y");
+        Student nevilleLongbottom = new Student("Neville Longbottom", nevilleLongbottomGrades, nevilleLongbottomAttendance);
+        students.put("NevLong", nevilleLongbottom);
+
         System.out.println("Welcome to the Hogwarts student database!");
 
         while(true) {
