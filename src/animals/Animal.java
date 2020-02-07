@@ -14,6 +14,8 @@ public abstract class Animal {
         this.diet = inputDiet;
     }
 
+    public abstract void eat();
+
     public char getGender() {
         return this.gender;
     }
@@ -28,7 +30,7 @@ public abstract class Animal {
 
     public String getDiet() { return this.diet; }
 
-    public void setGener(char inputGender) {
-
+    public void setGender(char inputGender) {
+        this.gender = inputGender;
     }
 }
