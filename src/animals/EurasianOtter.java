@@ -5,6 +5,10 @@ public class EurasianOtter extends Otter {
         super(inputGender, inputNumberOfAppendages);
     }
 
+    public void eat() {
+        System.out.println("EurasianOtter is eating.");
+    }
+
     public void swim() {
         System.out.println("I am a eurasianOtter and I'm swimming");
     }

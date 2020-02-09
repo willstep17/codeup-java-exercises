@@ -70,7 +70,7 @@ public class Input {
         do {
             System.out.print("Enter an int between " + min + " and " + max + ": ");
             userInput = getInt();
-        } while (min >= userInput && userInput <= max);
+        } while (userInput <= min || userInput >= max);
         return userInput;
     }
 
@@ -113,7 +113,7 @@ public class Input {
         do {
             System.out.print("Enter a double between " + min + " and " + max + ": ");
             userInput = getDouble();
-        } while (min >= userInput && userInput <= max);
+        } while (userInput <= min || userInput >= max);
         return userInput;
     }
 
