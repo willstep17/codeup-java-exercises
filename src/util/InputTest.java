@@ -13,11 +13,9 @@ public class InputTest {
 //        System.out.println(input.getDouble(40.34, 75.2));
 //        System.out.println(input.getDouble());
 //        System.out.println(input.getDouble("Enter a double: "));
-
-        input.getInt();
-        input.getInt(2, 49);
-
-        input.getDouble();
+//        input.getInt();
+//        input.getInt(2, 49);
+//        input.getDouble();
         input.getDouble(-33.33, 45.23);
     }
 }
