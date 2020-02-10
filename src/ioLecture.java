@@ -7,8 +7,35 @@ public class ioLecture {
     public static void main(String[] args) {
 //        newFile();
 //        writeFile();
-        readFile();
+//        readFile();
+//        writeMovies();
+        readMovies();
     }
+
+    static void writeMovies() {
+        List<String> movieList = new ArrayList<>();
+        movieList.add("Parasite");movieList.add("Ghostbusters");movieList.add("From Russia with Love");
+        try {
+            Path moviesPath = Paths.get("data", "movies.txt");
+            Files.write(moviesPath, movieList);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    static void readMovies() {
+        try {
+            Path moviesPath = Paths.get("data", "movies.txt");
+            List<String> moviesList = Files.readAllLines(moviesPath);
+            for(String movie : moviesList) {
+                System.out.println(movie);
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+
 
     static void newFile() {
         //   /Users/daniel/Code/europa-java-exercises/src/FileIOLecture.java
