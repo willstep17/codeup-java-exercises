@@ -8,7 +8,7 @@ public class Playground {
 //        System.out.println(test);
 
 //        Person newPerson = new Person("Jim", 43);
-//        newPerson.getName();
+//        newPerson.getName()
 
         Input input = new Input();
         Circle circle = new Circle(input.getDouble("Enter a radius: "));
