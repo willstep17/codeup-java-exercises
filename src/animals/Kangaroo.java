@@ -9,4 +9,5 @@ public abstract class Kangaroo extends Mammal {
     public void eat() {
         System.out.println("The Kangaroo is eating: " + this.diet);
     }
+
 }
