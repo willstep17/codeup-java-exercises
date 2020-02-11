@@ -3,7 +3,7 @@ import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ioLecture {
+public class IOLecture {
     public static void main(String[] args) {
 //        newFile();
 //        writeFile();
