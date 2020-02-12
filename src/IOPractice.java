@@ -20,4 +20,9 @@ public class IOPractice {
         }
     }
 
+    public List<String> readFile() {
+        List<String> returnStrings = new ArrayList<>();
+
+    }
+
 }
