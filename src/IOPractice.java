@@ -5,10 +5,14 @@ import java.util.ArrayList;
 
 public class IOPractice {
     public static void main(String[] args) {
-
+        writeFile();
+        List<String> cars = readFile();
+        for(String str : cars) {
+            System.out.println(str);
+        }
     }
 
-    public void writeFile() {
+    public static void writeFile() {
         List<String> cars = new ArrayList<>();
         cars.add("Mustang");cars.add("Range Rover");cars.add("Viper");
         try {
@@ -20,9 +24,15 @@ public class IOPractice {
         }
     }
 
-    public List<String> readFile() {
+    public static List<String> readFile() {
         List<String> returnStrings = new ArrayList<>();
-
+        try {
+            Path cars = Paths.get("data", "cars.txt");
+            returnStrings = Files.readAllLines(cars);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return returnStrings;
     }
 
 }
