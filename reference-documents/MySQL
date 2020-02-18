@@ -1,0 +1,5 @@
+mysql --version
+Check version
+
+mysql.server start
+Start MySQL
