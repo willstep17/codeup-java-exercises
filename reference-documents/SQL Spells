@@ -1,0 +1,19 @@
+mysql -u[username] -p[password]
+Login to MySQL
+
+CREATE USER [username]@[host] IDENTIFIED BY [password];
+Create user
+
+SELECT current_user;
+Show current user logged into MySQL.
+
+SELECT user, host FROM mysql.user;
+Show all users and hosts.
+
+GRANT [privileges] ON [database].[table] TO [username]@[host] WITH GRANT OPTION;
+Grant privileges to users. WITH GRANT OPTION is optional. Allows them to grant privileges.
+
+
+
+
+
