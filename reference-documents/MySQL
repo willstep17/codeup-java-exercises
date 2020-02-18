@@ -1,5 +1,21 @@
 mysql --version
 Check version
 
+mysql.server status
+Check status of MySQL
+
 mysql.server start
 Start MySQL
+
+mysql.server stop
+Stop MySQL
+
+whoami
+See Current User
+
+mysql -uname (root) -ppassword (codeup)
+Login to MySQL
+
+show databases;
+List MySQL Databases
+
