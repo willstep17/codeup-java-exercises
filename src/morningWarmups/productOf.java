@@ -23,6 +23,6 @@ public class productOf {
         for(int j=0;j<inputArr.size();j++) {
             returnArr.add(totalMultiplied / inputArr.get(j));
         }
-        return returnArr
+        return returnArr;
     }
-}
+
