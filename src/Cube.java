@@ -7,7 +7,7 @@ public class Cube {
             System.out.println("Enter a number to cube (-1 to exit): ");
             int userInput = Integer.parseInt(scanner.next());
             if (userInput == -1) {
-                break;;
+                break;
             }
             System.out.println(userInput + " cubed is: " + cube(userInput));
         }
