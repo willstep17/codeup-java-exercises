@@ -33,4 +33,8 @@ public abstract class Animal {
     public void setGender(char inputGender) {
         this.gender = inputGender;
     }
+
+    public void toString() {
+        return "Habitat: " + this.habitat;
+    }
 }
