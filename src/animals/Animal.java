@@ -34,7 +34,4 @@ public abstract class Animal {
         this.gender = inputGender;
     }
 
-    public void toString() {
-        return "Habitat: " + this.habitat;
-    }
 }
