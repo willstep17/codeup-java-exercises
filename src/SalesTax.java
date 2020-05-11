@@ -36,7 +36,7 @@ public class SalesTax {
         for(int i=0;i<inputQuantities.size();i++) {
             totalPrice += inputQuantities.get(i) * inputPrices.get(i);
         }
-        return totalPrice;
+        return totalPrice
     }
 
 }
