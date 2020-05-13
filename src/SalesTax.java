@@ -39,4 +39,8 @@ public class SalesTax {
         return totalPrice
     }
 
+
+    String phrase = "the music made   it   hard      to        concentrate";
+    String delims = "[ ]+";
+    String[] tokens = phrase.split(delims);
 }
