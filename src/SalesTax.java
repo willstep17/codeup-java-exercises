@@ -44,3 +44,6 @@ public class SalesTax {
     String delims = "[ ]+";
     String[] tokens = phrase.split(delims);
 }
+
+    String delims = "[,]";
+    String[] tokens = employee.split(delims);
