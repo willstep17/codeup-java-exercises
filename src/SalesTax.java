@@ -36,14 +36,6 @@ public class SalesTax {
         for(int i=0;i<inputQuantities.size();i++) {
             totalPrice += inputQuantities.get(i) * inputPrices.get(i);
         }
-        return totalPrice
+        return totalPrice;
     }
-
-
-    String phrase = "the music made   it   hard      to        concentrate";
-    String delims = "[ ]+";
-    String[] tokens = phrase.split(delims);
 }
-
-    String delims = "[,]";
-    String[] tokens = employee.split(delims);
