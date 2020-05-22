@@ -28,7 +28,6 @@ public class SalesTax {
             prices.add(Double.parseDouble(itemSplit[priceAt].substring(1)));
         }
         double totalPrice = calculateTotalPrice(quantities, prices);
-        double salesTax = totalPrice *
     }
 
     private static double calculateTotalPrice(ArrayList<Integer> inputQuantities, ArrayList<Double> inputPrices) {
