@@ -1,3 +1,5 @@
+package hackerRank;
+
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -17,7 +19,7 @@ public class MaxToys {
             if(total <= k) {
                 returnToys++;
             } else {
-                return returnToys;
+                return returnToys
             }
         }
         return returnToys;
