@@ -19,7 +19,7 @@ public class MaxToys {
             if(total <= k) {
                 returnToys++;
             } else {
-                return returnToys
+                return returnToys;
             }
         }
         return returnToys;
