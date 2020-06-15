@@ -29,6 +29,6 @@ public class RansomNote {
             }
         }
 
-        return "Yes";
+        return "Yes"
     }
 }
