@@ -26,12 +26,3 @@ public class BubbleSort {
         System.out.println();
     }
 }
-
-for(int i=97;i<(97+25);i++)
-        {
-        if(s1.indexOf(i)!=-1&& s2.indexOf(i)!=-1)
-        {
-        isAvailable = true;
-        break;
-        }
-        }

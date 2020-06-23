@@ -2,35 +2,39 @@ package hackerRank;
 
 public class SpecialStringAgain {
 
-    long substrCount(int n, String s) {
-        size_t result = 0;
-        char ch = '0';
-        char oldCh = '0';
-        size_t counter = 0;
-        size_t oldCounter = 0;
-        size_t leftCounter = 0;
-        bool special = false;
-        for_each(s.begin(), s.end(),
-                [&result, &ch, &oldCh, &counter, &oldCounter, &leftCounter, &special](char& val) {
-        if (val == ch) ++counter;
-        else
-        {
-            if (special)
-                result += counter < leftCounter ? counter : leftCounter;
-            special = counter == 1 && val == oldCh;
-            if (special)
-                leftCounter = oldCounter;
-            result += counter * (counter + 1) / 2;
-            oldCh = ch;
-            ch = val;
-            oldCounter = counter;
-            counter = 1;
+    public static void main(String[] args) {
+        int[] test = {3, 4, 5, 1, 2};
+        printArray(test);
+        swap(3, 2, test);
+        printArray(test);
+        int[] sortedArr = sort(test);
+        printArray(sortedArr);
+    }
+
+    private static int[] sort(int[] inputArr) {
+        for(int i=0;i<inputArr.length - 1;i++) {
+            for(int j=0;j<inputArr.length - i - 1;j++) {
+                if(inputArr[j] > inputArr[j+1]) {
+                    int temp = inputArr[j];
+                    inputArr[j] = inputArr[j+1];
+                    inputArr[j+1] = temp;
+                }
+            }
         }
-    });
-        if (special)
-            result += counter < leftCounter ? counter : leftCounter;
-        result += counter * (counter + 1) / 2;
-        return result;
+        return inputArr;
+    }
+
+    private static void swap(int a, int b, int[] inputArr) {
+        int temp = inputArr[b];
+        inputArr[b] = inputArr[a];
+        inputArr[a] = temp;
+    }
+
+    private static void printArray(int[] inputArr) {
+        for(int i : inputArr) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
     }
 
 }
