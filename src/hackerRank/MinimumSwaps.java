@@ -54,4 +54,5 @@ public class MinimumSwaps {
 
         scanner.close();
     }
+    scanner.close();
 }
