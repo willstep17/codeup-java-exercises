@@ -37,8 +37,6 @@ public class Student {
         studentOne.recordAttendance("2020-01-13", "R"); //Fail
         studentOne.recordAttendance("2020-01-13", "N"); //Pass
 
-
-
     }
 
     public String getName() {
