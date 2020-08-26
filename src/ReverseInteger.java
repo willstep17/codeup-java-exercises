@@ -1,6 +1,9 @@
 public class ReverseInteger {
     public static void main(String[] args) {
-
+        System.out.println(reverseInt(2435));
+        System.out.println(reverseInt(34335343));
+        System.out.println(reverseInt(-32));
+        System.out.println(reverseInt(1413313999)); //Within int bounds normally, out of bounds reversed
     }
 
     private static int reverseInt(int inputInt) {
@@ -11,5 +14,9 @@ public class ReverseInteger {
             reversed = reversed * 10 + inputInt % 10;
             inputInt /= 10;
         }
+        if(reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
+            return 0;
+        }
+        return (int) reversed;
     }
 }
